@@ -45,10 +45,13 @@ function showOrHideText() {
 		step_y=step_y * (Math.random() < 0.5 ? -1 : 1);
 		
 		score++;
+		document.querySelector('.Score').textContent =" Score: " +score;
 		
-		// let text2=document.querySelector('.Score');
-		// text2.setAttribute('text', '11111');
+		width_ball= width_ball - (width_ball/100) * 10
+		height_ball= height_ball - (height_ball/100) * 10
 		
+		image.setAttribute('width', width_ball);
+		image.setAttribute('height', height_ball);
 	} else {
 		text.setAttribute('display', 'none');
 	}
